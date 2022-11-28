@@ -52,7 +52,7 @@ function Navbar() {
               <Link to="/Temperature">Temperature</Link>
             </li>
             <li>
-              <Link to="/Humidity">Humidity</Link>
+              <Link to="/Humidity">Airflow</Link>
             </li>
             <li>
               <Link to="/Gas">Gas levels</Link>

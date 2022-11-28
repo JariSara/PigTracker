@@ -20,10 +20,10 @@ function Humidity() {
 
   }
 console.log(CurrentTime.currentTime);
-const [data, setData] = React.useState([  {name: CurrentTime.currentTime.toString(), value: randomIntFromInterval(20,25)}]);
+const [data, setData] = React.useState([  {name: CurrentTime.currentTime.toString(), value: (randomIntFromInterval(0,5)/10)}]);
 React.useEffect(() => {
   const timer = setInterval(() => {
-    setData((data) => [...data, {name: CurrentTime.currentTime.toString(), value: randomIntFromInterval(20, 25)}])
+    setData((data) => [...data, {name: CurrentTime.currentTime.toString(), value: (randomIntFromInterval(0, 5)/10)}])
     //data.push({name:CurrentTime.currentTime.toString(), value:99});
     console.log(data);
   }, 10000);
@@ -35,8 +35,7 @@ React.useEffect(() => {
 return (
   <body>
     <Navbar />
-    <h1>Humidity measurements</h1>
-    <h2>Humidity stuff</h2>
+    <h1>Airflow measurements</h1>  
     <div>
     <ResponsiveContainer width="100%" height={200}>
         <LineChart
