@@ -36,7 +36,6 @@ function Temperature() {
     <body>
       <Navbar />
       <h1>Temperature measurements</h1>
-      <h2>Temp stuff</h2>
       <div>
       <ResponsiveContainer width="100%" height={200}>
           <LineChart

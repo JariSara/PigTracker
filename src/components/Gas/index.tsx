@@ -30,6 +30,12 @@ function Gas() {
       setCo2((data) => [...data, { name: CurrentTime.currentTime.toString(), value: randomIntFromInterval(100, 3000) }])
       setNh3((data) => [...data, { name: CurrentTime.currentTime.toString(), value: randomIntFromInterval(0, 20) }])
       setH2s((data) => [...data, { name: CurrentTime.currentTime.toString(), value: (randomIntFromInterval(0, 5)/10) }])
+      //if(co2.length < 10){
+        //setCo2(co2.slice());
+      //}
+      //setCo2((data) => [...data, {name: data.name}]);
+      //setCo2(co2.slice(1));
+      //console.log(co2[0]);a
       //data.push({name:CurrentTime.currentTime.toString(), value:99});
       //console.log(data);
     }, 4000);
@@ -48,13 +54,13 @@ function Gas() {
       <h1>Gas measurements</h1>
       <h2>CO2 Measurements:</h2>
       <div>
-      /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
+      
         <form onSubmit={handleSubmit(onSubmit)}>
           {/* register your inpt into the hook by invoking the "register" function */}
-          <input defaultValue="test" {...register("example")} />
+          <input defaultValue="min" {...register("example")} />
 
           {/* include validation with required or other standard HTML validation rules */}
-          <input {...register("exampleRequired", { required: true })} />
+          <input defaultValue="max"  {...register("exampleRequired", { required: true })} />
           {/* errors will return when field validation fails  */}
           {errors.exampleRequired && <span>This field is required</span>}
 
@@ -84,6 +90,17 @@ function Gas() {
         </ResponsiveContainer>
       </div>
       <h2>NH3 measurements:</h2>
+      <form onSubmit={handleSubmit(onSubmit)}>
+          {/* register your inpt into the hook by invoking the "register" function */}
+          <input defaultValue="min" {...register("example")} />
+
+          {/* include validation with required or other standard HTML validation rules */}
+          <input defaultValue="max"  {...register("exampleRequired", { required: true })} />
+          {/* errors will return when field validation fails  */}
+          {errors.exampleRequired && <span>This field is required</span>}
+
+          <input type="submit" />
+        </form>
       <div>
         <ResponsiveContainer width="100%" height={200}>
           <LineChart
@@ -107,6 +124,17 @@ function Gas() {
         </ResponsiveContainer>
       </div>
       <h2>H2S measurements:</h2>
+      <form onSubmit={handleSubmit(onSubmit)}>
+          {/* register your inpt into the hook by invoking the "register" function */}
+          <input defaultValue="min" {...register("example")} />
+
+          {/* include validation with required or other standard HTML validation rules */}
+          <input defaultValue="max"  {...register("exampleRequired", { required: true })} />
+          {/* errors will return when field validation fails  */}
+          {errors.exampleRequired && <span>This field is required</span>}
+
+          <input type="submit" />
+        </form>
       <div>
         <ResponsiveContainer width="100%" height={200}>
           <LineChart
