@@ -20,10 +20,7 @@ function Temperature() {
 
     }
   console.log(CurrentTime.currentTime);
-  const [data, setData] = React.useState([  {name: "data1", value: 23},
-  {name: "data2", value: 24},
-  {name: "data3", value: 21},
-  {name: "data6", value: 29},]);
+  const [data, setData] = React.useState([  {name: CurrentTime.currentTime.toString(), value: randomIntFromInterval(20,25)}]);
   React.useEffect(() => {
     const timer = setInterval(() => {
       setData((data) => [...data, {name: CurrentTime.currentTime.toString(), value: randomIntFromInterval(20, 25)}])

@@ -12,6 +12,7 @@ import Temperature from "./components/Temperature";
 import Humidity from "./components/Humidity";
 import Gas from "./components/Gas";
 import AllData from "./components/AllData";
+import Analytics from "./components/Analytics";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="Humidity" element={<Humidity />} />
       <Route path="Gas" element={<Gas />} />
       <Route path="AllData" element={<AllData />} />
+      <Route path="Analytics" element={<Analytics />} />
       <Route path="/" element={<Home />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

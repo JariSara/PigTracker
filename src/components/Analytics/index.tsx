@@ -7,7 +7,7 @@ function randomIntFromInterval(min: number, max: number) { // min and max includ
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-function Humidity() {
+function Analytics() {
   var CurrentTime:any;
   var today = new Date(),
   time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
@@ -35,31 +35,12 @@ React.useEffect(() => {
 return (
   <body>
     <Navbar />
-    <h1>Humidity measurements</h1>
-    <h2>Humidity stuff</h2>
+    <h1>Analytics</h1>
+    <h2>Analytics stuff</h2>
     <div>
-    <ResponsiveContainer width="100%" height={200}>
-        <LineChart
-          width={500}
-          height={200}
-          data={data}
-          margin={{
-            top: 10,
-            right: 30,
-            left: 0,
-            bottom: 0,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Line connectNulls type="monotone" dataKey="value" stroke="#8884d8" fill="#8884d8" />
-        </LineChart>
-      </ResponsiveContainer>
     </div>
   </body>
 );
 }
 
-export default Humidity;
+export default Analytics;

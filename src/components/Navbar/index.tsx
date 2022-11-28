@@ -58,6 +58,9 @@ function Navbar() {
               <Link to="/Gas">Gas levels</Link>
             </li>
             <li>
+              <Link to="/Analytics">Analytics</Link>
+            </li>
+            <li>
             <Link to="/AllData">
               All Data
             </Link>
