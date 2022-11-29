@@ -38,7 +38,7 @@ function Gas() {
       //console.log(co2[0]);a
       //data.push({name:CurrentTime.currentTime.toString(), value:99});
       //console.log(data);
-    }, 4000);
+    }, 2000);
     return () => {
       clearInterval(timer);
     };
@@ -84,8 +84,8 @@ function Gas() {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />
-            <Tooltip />
-            <Line connectNulls type="monotone" dataKey="value" stroke="#4523d8" fill="red" />
+            <Tooltip/>
+            <Line connectNulls type="monotone" dataKey="value" stroke="#4523d8" fill="red" isAnimationActive={false}/>
           </LineChart>
         </ResponsiveContainer>
       </div>
@@ -119,7 +119,7 @@ function Gas() {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Line connectNulls type="monotone" dataKey="value" stroke="#4523d8" fill="red" />
+            <Line connectNulls type="monotone" dataKey="value" stroke="#4523d8" fill="red" isAnimationActive={false}/>
           </LineChart>
         </ResponsiveContainer>
       </div>
@@ -153,7 +153,7 @@ function Gas() {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Line connectNulls type="monotone" dataKey="value" stroke="#4523d8" fill="red" />
+            <Line connectNulls type="monotone" dataKey="value" stroke="#4523d8" fill="red" isAnimationActive={false}/>
           </LineChart>
         </ResponsiveContainer>
       </div>

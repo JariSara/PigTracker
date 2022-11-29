@@ -50,7 +50,7 @@ function Home() {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Line connectNulls type="monotone" dataKey="value" stroke="#4523d8" fill="red" />
+            <Line connectNulls type="monotone" dataKey="value" stroke="#4523d8" fill="red" isAnimationActive={false}/>
           </LineChart>
         </ResponsiveContainer>
       </div>

@@ -10,7 +10,7 @@ function randomIntFromInterval(min: number, max: number) { // min and max includ
 function Temperature() {
   var CurrentTime:any;
     var today = new Date(),
-    time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    time = today.getHours() + ':' + today.getMinutes();
 
    
 
@@ -26,7 +26,7 @@ function Temperature() {
       setData((data) => [...data, {name: CurrentTime.currentTime.toString(), value: randomIntFromInterval(20, 25)}])
       //data.push({name:CurrentTime.currentTime.toString(), value:99});
       console.log(data);
-    }, 10000);
+    }, 3000);
     return () => {
       clearInterval(timer);
     };
@@ -53,7 +53,7 @@ function Temperature() {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Line connectNulls type="monotone" dataKey="value" stroke="#8884d8" fill="#8884d8" />
+            <Line connectNulls type="monotone" dataKey="value" stroke="#8884d8" fill="#8884d8" isAnimationActive={false}/>
           </LineChart>
         </ResponsiveContainer>
       </div>

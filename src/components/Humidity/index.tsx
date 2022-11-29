@@ -10,7 +10,7 @@ function randomIntFromInterval(min: number, max: number) { // min and max includ
 function Humidity() {
   var CurrentTime:any;
   var today = new Date(),
-  time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+  time = today.getHours() + ':' + today.getMinutes();
 
  
 
@@ -53,7 +53,7 @@ return (
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
-          <Line connectNulls type="monotone" dataKey="value" stroke="#8884d8" fill="#8884d8" />
+          <Line connectNulls type="monotone" dataKey="value" stroke="#8884d8" fill="#8884d8" isAnimationActive={false}/>
         </LineChart>
       </ResponsiveContainer>
     </div>
